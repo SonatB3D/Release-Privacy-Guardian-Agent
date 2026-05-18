@@ -8,6 +8,18 @@ It helps you review a project before publishing it by scanning for private paths
 
 ---
 
+## Download
+
+The main application files are available from the **Releases** section.
+
+This repository contains documentation, screenshots, release notes, and support files.  
+The compiled Windows installer and portable ZIP are distributed as GitHub Release assets instead of being stored directly in the repository, because they are packaged binary release files and may exceed normal repository upload limits.
+
+Available release assets:
+
+- `ReleasePrivacyGuardianAgent_Setup.rar`
+- `ReleasePrivacyGuardianAgent_Portable.rar`
+
 ## Key Features
 
 - Local-only scanning
