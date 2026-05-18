@@ -544,11 +544,6 @@ The final responsibility for public release decisions belongs to the user.
 
 ---
 
-## License
-
-If this project is distributed as freeware, donationware, freemium, or commercial software, make sure the license section clearly explains what users may and may not do with the application, documentation, screenshots, release assets, and source files.
-
----
 
 ## Disclaimer
 
