@@ -1,0 +1,47 @@
+Release Privacy Guardian Agent - Public Release Checklist
+=========================================================
+
+Version: 0.3.9
+Developer: Sonat Birdane
+
+Before publishing any project:
+
+1. Confirm you selected the correct project folder(s) and/or file(s).
+2. Run General Public Release scan.
+3. Run Strict Privacy Audit scan.
+4. Review every HIGH and CRITICAL finding.
+5. Review MEDIUM findings, especially internal hosts, paths, and business/customer data.
+6. Rotate/revoke any real exposed credential.
+7. Export TXT and HTML reports if needed.
+8. Review reports before sharing or publishing them.
+9. Use Safe Clean Preview if cleanup is needed.
+10. Read the preview carefully before cleaning.
+11. Use Clean Original + Backup only after reviewing the preview.
+12. Confirm backup was created successfully.
+13. Re-scan the cleaned original project folder or direct file target.
+14. Manually open important cleaned files and inspect them.
+15. Confirm no BACKUP folder is inside the public release package.
+16. Confirm direct file backups are outside the release folder under ParentFolder_BACKUP/ONLYFILES.
+17. Confirm no .env, database, log, backup, temp, crash dump, or customer export file is included accidentally.
+18. Review installer scripts and installer output.
+19. Review portable ZIP contents.
+20. Review GitHub release assets and screenshots.
+21. Review README, FUNCTIONS, SECURITY_NOTES, PRIVACY_POLICY, release notes, and license files.
+22. Confirm there are no private developer paths, private emails, customer names, addresses, tax numbers, ID numbers, order IDs, or internal notes.
+23. Confirm public example values are intentional.
+24. Do a final manual review. Do not rely only on the tool.
+25. Publish only after you are personally satisfied that the release package is safe.
+
+Responsibility Notice
+---------------------
+This tool is developed by a single independent developer and may contain bugs or miss issues. The final responsibility for public release belongs to the user.
+
+
+Release Asset Output
+--------------------
+Expected final assets are generated under release_assets/:
+- ReleasePrivacyGuardianAgent_Portable_v0.3.9.zip
+- ReleasePrivacyGuardianAgent_Setup_v0.3.9.exe
+- SHA256SUMS.txt
+
+Before publishing, scan the source tree and the final release_assets/staging contents, then manually verify that BACKUP folders, reports, test files, temp files, build caches, .git data, and real credentials are not included.

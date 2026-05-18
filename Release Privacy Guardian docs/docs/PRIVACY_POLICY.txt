@@ -1,0 +1,44 @@
+Release Privacy Guardian Agent - Privacy Policy
+===============================================
+
+Version: 0.3.9
+Developer: Sonat Birdane
+
+Release Privacy Guardian Agent is designed to run locally on the user's computer.
+
+Local Processing
+----------------
+The application does not upload scanned project files.
+The application does not transmit scan results to a remote server.
+The application does not require an internet connection for scanning.
+
+Local Settings
+--------------
+The application stores user settings locally under the user's profile.
+
+Local settings may include:
+
+- recently selected project folders or files
+- scan profile
+- scan options
+- whitelist phrases
+- ignored findings/rules/files
+- recent report paths
+- window size
+
+Reports
+-------
+Reports are saved only where the user chooses to export them. Reports may contain file paths, issue summaries, redacted evidence, and other local context. Users should review reports before sharing or publishing them.
+
+Backups
+-------
+Clean Original + Backup creates local backup copies before modifying selected originals.
+
+Folder backups are created as sibling BACKUP folders.
+Direct file backups are created under ParentFolder_BACKUP/ONLYFILES.
+
+The user is responsible for storing, reviewing, deleting, or excluding these backups from public releases.
+
+No External Guarantee
+---------------------
+Because the tool is local and pattern-based, it does not guarantee that all private information has been found or removed. Users remain responsible for final privacy review.

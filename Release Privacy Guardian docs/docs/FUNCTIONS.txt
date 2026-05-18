@@ -1,0 +1,259 @@
+Release Privacy Guardian Agent - Functions
+==========================================
+
+Version: 0.3.9
+Developer: Sonat Birdane
+
+Important Notice
+----------------
+Release Privacy Guardian Agent is developed by a single independent developer. It is a practical pre-release safety tool, not a guarantee of complete privacy, security, legal, or compliance coverage. Users remain responsible for final review and for deciding what is safe to publish.
+
+Overview
+--------
+Release Privacy Guardian Agent is a local pre-release privacy and security scanner. It is designed for developers, indie tool makers, public GitHub projects, installer packages, small business applications, client-facing tools, and 3D/game pipeline utilities.
+
+1. Scan Target Selection
+------------------------
+The GUI supports both folder and file targets:
+
+Add Folder:
+Scans one folder recursively.
+
+Add Multiple Folders:
+Adds multiple project folders for recursive scanning.
+
+Add File:
+Scans one selected file directly.
+
+Add Multiple Files:
+Adds multiple selected files directly.
+
+The scan target list can contain a mix of folders and files. Common dependency/cache/backup locations are skipped where appropriate, including .git, __pycache__, node_modules, virtual environments, build caches, and BACKUP folders.
+
+2. Scan Profiles
+----------------
+General Public Release:
+Balanced default mode for public release candidates.
+
+Python Desktop App:
+Focuses on source code, logs, package artifacts, and config files common in Python desktop tools.
+
+Installer Package:
+Focuses on NSIS scripts, installer scripts, batch files, PowerShell files, release folders, and package hygiene.
+
+Business / Client Software:
+Adds stricter attention to customer, phone, address, invoice, tax, order, appointment, and similar business data terms.
+
+Game / 3D Pipeline Tool:
+Adds attention to Maya, Autodesk, Unreal, Unity, FBX, Content, Assets, texture source, and local pipeline path patterns.
+
+Strict Privacy Audit:
+Most aggressive mode. It is intentionally noisy and should be used for final review.
+
+3. Scan Options
+---------------
+Users can enable or disable these broad categories:
+
+- source file scanning
+- document scanning
+- config file scanning
+- installer script scanning
+- log/report scanning
+- local path detection
+- personal developer info detection
+- API key/token/secret detection
+- customer/client data detection
+
+4. Risk Detection
+-----------------
+The scanner can detect many pattern categories, including:
+
+- local Windows user paths
+- local Unix/macOS home paths
+- absolute Windows drive paths
+- loose or typo-prone local paths
+- local machine names
+- public/private email addresses
+- personal email domains
+- private key blocks
+- certificate blocks
+- generic secret assignments
+- loose API/token assignments such as short labels followed by long random-looking values
+- OpenAI-style API keys
+- Anthropic / Claude API keys
+- Google Cloud / Gemini / Firebase-style API keys
+- GitHub token-shaped strings
+- GitLab token-shaped strings
+- AWS access keys and AWS secret access key assignments
+- Stripe secret/restricted keys
+- Slack tokens and Slack webhooks
+- Discord webhook URLs
+- SendGrid API keys
+- Twilio Account SID and Twilio auth token assignments
+- Cloudflare API token assignments
+- Azure client secret assignments
+- Hugging Face tokens
+- Replicate tokens
+- npm tokens
+- PyPI tokens
+- database connection strings
+- JWT-shaped tokens
+- Authorization Bearer token headers
+- cookie/session/auth token values
+- Kubernetes Secret-like blocks
+- Google service-account JSON-like blocks
+- risky credential/key file names
+- database files
+- customer export file names
+- backup/temp/log files
+- .env files
+- customer/client/business data fields
+- multilingual business/customer fields
+
+5. Business and Customer Data Detection
+---------------------------------------
+The scanner includes English and Turkish customer/business terms, plus multilingual field-label support for Chinese, Traditional Chinese, Japanese, Korean, French, German, Italian, Spanish, and Portuguese.
+
+It can flag fields such as:
+
+- customer/client/person name
+- company/business name
+- address, billing address, shipping address, delivery address
+- phone/mobile/contact number
+- tax/VAT/company registration number
+- national ID/passport/document number
+- invoice number
+- order number
+- booking/reservation/appointment identifier
+- private customer note
+- internal business note
+- postal/ZIP code
+- bank account/IBAN
+- birth date
+- customer export file names
+
+6. Risk Levels
+--------------
+LOW:
+Minor release hygiene issue.
+
+MEDIUM:
+Internal configuration, infrastructure, or possible data exposure that should be reviewed.
+
+HIGH:
+Developer privacy, customer data, local path, personal email, or significant release risk.
+
+CRITICAL:
+Secret, token, private key, credential, or comparable release blocker.
+
+7. Release Status
+-----------------
+PASSED:
+No blocking issues were found based on the selected rules and options.
+
+WARNING:
+Non-blocking issues were found. Review before release.
+
+BLOCKED:
+High or Critical issues were found. Public release should not proceed until reviewed and resolved.
+
+8. Issue Review Panel
+---------------------
+Selecting a finding shows detailed information:
+
+- severity
+- category
+- issue name
+- rule ID
+- fingerprint
+- file path
+- line/column
+- evidence
+- why it matters
+- suggested action
+- review note
+
+The GUI includes copy/open actions for issue details, file paths, evidence, and summaries.
+
+9. False Positive Controls
+--------------------------
+Ignore Issue:
+Ignores only one exact finding fingerprint.
+
+Ignore Rule:
+Ignores all findings from the selected rule.
+
+Ignore File:
+Ignores all findings from the selected file.
+
+These controls are useful for intentional public documentation examples, but should be used carefully.
+
+10. Whitelist Editor
+--------------------
+Users can add exact public phrases that should be treated as safe in their own project context. The whitelist is useful for intentional public company names, public support contacts, public example values, and approved documentation phrases.
+
+11. Safe Clean Preview
+----------------------
+Safe Clean Preview shows planned replacement/removal actions without changing files. Review this preview carefully before using Clean Original + Backup.
+
+12. Clean Original + Backup
+---------------------------
+This function creates a backup first, then modifies the selected original target in place.
+
+Folder target behavior:
+
+Original:
+<PROJECT_FOLDER>
+
+Backup:
+<PROJECT_FOLDER>_BACKUP
+
+Direct file target behavior:
+
+Original:
+<PROJECT_FOLDER>/config.txt
+
+Backup:
+<PROJECT_FOLDER>_BACKUP/ONLYFILES/config.txt
+
+Direct file backup intentionally stays outside the release folder to reduce accidental publication of backup files.
+
+13. Public-Friendly Replacement Values
+--------------------------------------
+Clean operations use public-friendly examples instead of harsh placeholder text. Examples include:
+
+- example
+- example@example.com
+- example/project-path
+- example/downloads
+- example-machine
+- example.local
+- example customer
+- example business
+- example company
+- example address
+- example-phone
+- example-tax-number
+- example-id-number
+- example-invoice-id
+- example-order-id
+- example public note
+- example-postal-code
+- example-bank-account
+- example-date
+
+14. Risky File Handling
+-----------------------
+After backup, clean mode can remove risky release files from the selected original target, including database files, logs, temporary/backup files, and environment files.
+
+15. Reports
+-----------
+TXT and HTML reports can be exported. Reports may contain sensitive context or redacted evidence. Review reports before sharing or publishing them.
+
+16. Persistent Settings
+-----------------------
+The app stores local settings under the user profile. These may include selected targets, scan profile, scan options, whitelist entries, ignored entries, and last report paths.
+
+17. Limitations
+---------------
+The scanner uses pattern-based detection. It may produce false positives or false negatives. It does not prove that a project is safe, compliant, legally ready, or free of all secrets. Final responsibility remains with the user.

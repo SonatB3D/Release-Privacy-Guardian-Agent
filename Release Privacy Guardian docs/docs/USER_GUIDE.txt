@@ -1,0 +1,125 @@
+Release Privacy Guardian Agent - User Guide
+==========================================
+
+Version: 0.3.9
+Developer: Sonat Birdane
+
+Important Notice
+----------------
+This program is developed by a single independent developer. It is provided as a practical safety helper, but it may contain bugs and may miss issues. Always perform a final manual review before publishing any project. The user is responsible for release decisions and for anything published publicly.
+
+Purpose
+-------
+Release Privacy Guardian Agent helps you review a project before public release. It scans selected folders and/or files locally and reports privacy, security, customer-data, local-environment, and release-hygiene risks.
+
+Basic Folder Scan
+-----------------
+1. Open the program.
+2. Click Add Folder or Add Multiple Folders.
+3. Select the project folder(s) you want to review.
+4. Choose a Scan Profile.
+5. Click Start Scan.
+6. Review the PASSED / WARNING / BLOCKED status.
+7. Select findings to see full details.
+8. Export TXT or HTML reports if needed.
+
+Basic File Scan
+---------------
+1. Open the program.
+2. Click Add File or Add Multiple Files.
+3. Select the file(s) you want to review.
+4. Choose a Scan Profile.
+5. Click Start Scan.
+6. Review any findings.
+
+Scan Profiles
+-------------
+General Public Release:
+Balanced checks for public software releases.
+
+Python Desktop App:
+Extra attention to Python apps, logs, packaged builds, and config files.
+
+Installer Package:
+Extra attention to installer scripts and build artifacts.
+
+Business / Client Software:
+Stricter checks for customer/client data and business records.
+
+Game / 3D Pipeline Tool:
+Extra checks for Maya, Unreal, Unity, FBX, texture, asset, and local pipeline references.
+
+Strict Privacy Audit:
+Most aggressive mode. More false positives are expected.
+
+Finding Review
+--------------
+Click any finding row to view details, including file path, rule ID, evidence, reason, and suggested action. Use the copy/open buttons to inspect the related file carefully.
+
+False Positive Handling
+-----------------------
+If a finding is intentional and safe:
+
+- Ignore Issue ignores only that exact finding.
+- Ignore Rule ignores all findings from that rule.
+- Ignore File ignores all findings from that file.
+
+Use ignore actions carefully. Do not ignore findings just to get a PASSED status.
+
+Whitelist
+---------
+The whitelist is for public phrases that should not be treated as private in your project context.
+
+Examples of safe whitelist usage:
+
+- public company name
+- public product name
+- public support contact
+- public documentation example phrase
+
+Avoid adding real secrets, private emails, private customer names, or internal path fragments to the whitelist.
+
+Safe Clean Preview
+------------------
+Safe Clean Preview shows planned actions without changing files. Always review the preview before cleaning.
+
+Clean Original + Backup
+-----------------------
+This action creates a backup first, then modifies the selected original folder or file in place.
+
+Folder target example:
+Original: <PROJECT_FOLDER>
+Backup:   <PROJECT_FOLDER>_BACKUP
+
+Direct file target example:
+Original: <PROJECT_FOLDER>/config.txt
+Backup:   <PROJECT_FOLDER>_BACKUP/ONLYFILES/config.txt
+
+Direct file mode keeps backup files outside the release package folder so users do not accidentally publish backup copies next to cleaned files.
+
+If the backup already exists, a timestamp is appended.
+
+Cleaned values use public examples such as:
+
+- example
+- example@example.com
+- example/project-path
+- example/downloads
+- example customer
+- example address
+
+After Cleaning
+--------------
+1. Re-scan the cleaned original target.
+2. Confirm the status is PASSED or review remaining issues.
+3. Manually open important files and inspect the final content.
+4. Make sure BACKUP folders are not inside the public release package.
+5. Rotate/revoke any real credential that was ever present in the project.
+
+Reports
+-------
+Reports are saved only when and where you export them. Reports can still contain sensitive paths or redacted evidence, so review them before sharing.
+
+Final Release Responsibility
+----------------------------
+Before public release, manually review the final project, installer, portable ZIP, documentation, GitHub release assets, and screenshots. This tool can reduce risk, but it cannot replace human judgment.

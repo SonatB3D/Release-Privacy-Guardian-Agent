@@ -1,0 +1,65 @@
+Release Privacy Guardian Agent - Security Notes
+===============================================
+
+Version: 0.3.9
+Developer: Sonat Birdane
+
+Single-Developer Notice
+-----------------------
+This application is developed by a single independent developer. Although it is designed with care, bugs, missed detections, false positives, false negatives, packaging mistakes, and edge-case failures are possible. Users must verify all results before release.
+
+Local-Only Operation
+--------------------
+The scanner runs locally. It does not upload, transmit, or share scanned files.
+
+Pattern-Based Detection
+-----------------------
+The scanner uses deterministic pattern rules. This is useful for fast local checks, but it cannot cover every possible naming convention, language, data format, private business phrase, encoded value, generated token, or secret storage pattern.
+
+False Positives
+---------------
+The scanner may flag safe documentation examples, public support information, public company names, or intentionally published example values. Use the review panel, whitelist, and ignore controls carefully.
+
+False Negatives
+---------------
+The scanner may miss real secrets or private data if they are encoded, split across files, disguised, stored in binary files, stored in images, hidden inside archives, compressed, encrypted, obfuscated, or written in a format not covered by the rules.
+
+Credential Exposure
+-------------------
+If a real credential is found, remove it and rotate/revoke it before public release. Replacing the value with an example does not make the old exposed credential safe.
+
+Clean Mode
+----------
+Clean Original + Backup creates backups before modifying selected original targets.
+
+Folder targets create sibling BACKUP folders.
+Direct file targets are copied to ParentFolder_BACKUP/ONLYFILES so backup files are not left inside the release folder.
+
+Review backups carefully and do not publish backup folders.
+
+Risky File Removal
+------------------
+After backup, clean mode can remove risky files from the original target, including database files, log files, temporary/backup files, and environment files.
+
+Manual Review Still Required
+----------------------------
+This tool is a release safety gate, not a replacement for manual review, code review, professional security auditing, legal/privacy compliance review, customer-data compliance review, or final human approval.
+
+User Responsibility
+-------------------
+The user is responsible for:
+
+- choosing the correct scan targets
+- reviewing scan results
+- reviewing Safe Clean Preview before cleanup
+- verifying backups
+- verifying cleaned output
+- rotating/revoking exposed credentials
+- ensuring BACKUP folders are not published
+- ensuring reports do not leak sensitive details
+- deciding whether a release is safe to publish
+
+
+App Metadata Allowlist vs User Project Whitelist
+------------------------------------------------
+The application may intentionally include its own public credit in About, README, and documentation metadata. This internal app metadata allowance is separate from the user project whitelist. Developer credit for Release Privacy Guardian Agent must not become a global allowlist entry for unrelated user projects.

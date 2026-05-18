@@ -1,0 +1,36 @@
+Release Privacy Guardian Agent - Liability and Limitations
+==========================================================
+
+Version: 0.3.9
+Developer: Sonat Birdane
+
+Single-Developer Project
+------------------------
+Release Privacy Guardian Agent is developed by a single independent developer. The tool is built to help users reduce public-release privacy and security mistakes, but it may contain bugs, incomplete rules, missed cases, or unexpected behavior.
+
+No Guarantee
+------------
+The tool does not guarantee that a project is safe to publish. It does not guarantee detection of every secret, credential, private path, customer record, personal identifier, business note, license issue, compliance issue, or legal/privacy risk.
+
+User Responsibility
+-------------------
+The user is responsible for:
+
+- deciding what files to scan
+- reviewing every scan result
+- reviewing ignored findings and whitelist entries
+- reviewing Safe Clean Preview before cleanup
+- verifying created backups
+- verifying cleaned files
+- rotating/revoking real exposed credentials
+- checking reports before sharing
+- excluding backup folders from release packages
+- manually inspecting final EXE, installer, portable ZIP, documentation, screenshots, and release assets
+
+Manual Final Review Required
+----------------------------
+Before publishing anything publicly, users should manually inspect the final release package. This tool should be used as an additional safety layer, not as the only review step.
+
+Professional Review
+-------------------
+For high-risk projects, commercial products, customer data, regulated data, enterprise releases, or legal/privacy-sensitive releases, users should also obtain professional security, legal, and compliance review.

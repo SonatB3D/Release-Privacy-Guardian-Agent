@@ -1,0 +1,37 @@
+Release Privacy Guardian Agent v0.3.9
+=========================================
+
+Documentation & Release Readiness Update.
+
+Highlights:
+- Add Folder and Add Multiple Folders
+- Add File and Add Multiple Files
+- Local-only scan and report workflow
+- Expanded provider-specific secret detection
+- Expanded business/customer data detection
+- Multilingual customer-data field detection
+- Safe Clean Preview
+- Clean Original + Backup workflow
+- Direct file backups stored under ParentFolder_BACKUP/ONLYFILES
+- Public-friendly example replacements
+- Ignore Issue / Ignore Rule / Ignore File
+- Custom whitelist editor
+- Persistent settings
+- TXT and HTML reports
+- Professional GUI with button icons
+- App icon for EXE and installer packaging
+- Updated documentation, security notes, release checklist, and liability/disclaimer notices
+
+Important:
+Clean Original + Backup creates backups first, then modifies selected originals in place. Folder targets create sibling BACKUP folders. Direct file targets are copied to ParentFolder_BACKUP/ONLYFILES so backup files are not left beside cleaned files. Do not publish BACKUP folders.
+
+Security note:
+If a real credential was present, rotate/revoke it even if the tool replaced it with a public example value.
+
+Responsibility note:
+This application is developed by a single independent developer. It can help reduce release risk, but it cannot guarantee that every issue will be detected. Users must manually review final release contents before publishing.
+
+Recommended release assets:
+- ReleasePrivacyGuardianAgent_Setup_v0.3.9.exe
+- ReleasePrivacyGuardianAgent_Portable_v0.3.9.zip
+- SHA256SUMS.txt
