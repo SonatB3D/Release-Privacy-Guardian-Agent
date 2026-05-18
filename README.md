@@ -31,6 +31,21 @@ It helps you review a project before publishing it by scanning for private paths
 - Public-friendly replacement values
 - Backup-first cleanup behavior
 
+The interface is currently in English, but the scanner includes multilingual detection support for customer and business-related fields.
+
+Supported detection languages include:
+
+✔ English
+✔ Turkish
+✔ Chinese
+✔ Traditional Chinese
+✔ Japanese
+✔ Korean
+✔ French
+✔ German
+✔ Italian
+✔ Spanish
+✔ Portuguese
 ---
 
 ## Screenshots
