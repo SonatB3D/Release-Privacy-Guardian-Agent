@@ -1,6 +1,6 @@
 # Release Privacy Guardian Agent
 
-**Release Privacy Guardian Agent** is a local pre-release privacy and security scanner for developers, indie tool makers, public GitHub projects, installer packages, small business tools, and 3D/game pipeline utilities.
+**Release Privacy Guardian Agent** is a Free to Use, local pre-release privacy and security scanner for developers, indie tool makers, public GitHub projects, installer packages, small business tools, and 3D/game pipeline utilities.
 
 It helps you review a project before publishing it by scanning for private paths, exposed credentials, API keys, tokens, personal/developer information, customer/client data, risky release files, logs, backups, installer mistakes, and other public-release hygiene risks.
 
