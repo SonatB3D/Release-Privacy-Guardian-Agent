@@ -502,45 +502,6 @@ Before publishing, scan the source tree and the final release/staging contents. 
 
 ---
 
-## Checksums
-
-Use `SHA256SUMS.txt` from the release assets to verify downloaded files.
-
-Example:
-
-```powershell
-Get-FileHash .\ReleasePrivacyGuardianAgent_Setup_v0.3.9.exe -Algorithm SHA256
-Get-FileHash .\ReleasePrivacyGuardianAgent_Portable_v0.3.9.zip -Algorithm SHA256
-```
-
-Compare the output with the values listed in `SHA256SUMS.txt`.
-
----
-
-## Suggested Repository Structure
-
-```text
-ReleasePrivacyGuardianAgent/
-├─ README.md
-├─ FUNCTIONS.txt
-├─ USER_GUIDE.txt
-├─ PRIVACY_POLICY.txt
-├─ SECURITY_NOTES.txt
-├─ LIABILITY_AND_LIMITATIONS.txt
-├─ RELEASE_CHECKLIST.txt
-├─ screenshots/
-│  ├─ rpga-dashboard.png
-│  ├─ rpga-blocked-scan.png
-│  ├─ rpga-issue-details.png
-│  └─ rpga-clean-preview-before-after.png
-└─ release_assets/
-   ├─ ReleasePrivacyGuardianAgent_Portable_v0.3.9.zip
-   ├─ ReleasePrivacyGuardianAgent_Setup_v0.3.9.exe
-   └─ SHA256SUMS.txt
-```
-
----
-
 ## Documentation Files
 
 Recommended documentation files:
