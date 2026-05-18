@@ -17,7 +17,7 @@ The compiled Windows installer and portable ZIP are distributed as GitHub Releas
 
 Available release assets:
 
-- `ReleasePrivacyGuardianAgent_Setup.rar`
+- `ReleasePrivacyGuardianAgent_Installer.rar`
 - `ReleasePrivacyGuardianAgent_Portable.rar`
 
 ## Key Features
