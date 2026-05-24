@@ -1,0 +1,16 @@
+Original Author: Sonat Birdane
+Original Project: Release Privacy Guardian Agent
+Original Repository: https://github.com/SonatB3D/Release-Privacy-Guardian-Agent
+
+This project was originally created by Sonat Birdane.
+
+This software may be used, forked, modified, and redistributed under the terms of 
+the LICENSE file included in this repository.
+
+The original author attribution, copyright notice, and license file must be preserved in all copies, 
+forks, modified versions, redistributed versions, and derivative works.
+
+Modified versions must clearly state that they are based on the original project by Sonat Birdane.
+
+The project name, logo, icons, screenshots, visual identity, and author name may not be used to 
+misrepresent authorship or imply official endorsement.

@@ -1,0 +1,72 @@
+Sonat Birdane Free Use License
+
+Copyright (c) 2026 Sonat Birdane
+
+This software, source code, documentation, and related project files were originally created by Sonat Birdane.
+
+Permission is granted, free of charge, to use, copy, fork, study, modify, and 
+distribute this software for personal, educational, non-commercial, or 
+commercial purposes, subject to the conditions below.
+
+1. Attribution Required
+
+You must keep the original copyright notice, this license file, and clear attribution to the 
+original author in any copy, fork, modified version, redistributed version, or derivative work.
+
+The following attribution must not be removed:
+
+Original Author: Sonat Birdane
+Original Project: Release Privacy Guardian Agent
+Original Repository: https://github.com/SonatB3D/Release-Privacy-Guardian-Agent
+
+2. No False Ownership Claim
+
+You may not claim that the original project, original source code, original documentation, 
+original branding, or original project identity was created entirely by you.
+
+If you publish a modified version, fork, clone, derivative work, or redistributed version, y
+ou must clearly state that your version is based on the original project created by Sonat Birdane.
+
+Example attribution for modified versions:
+
+"This project is based on the original work created by Sonat Birdane."
+
+3. Modified Versions
+
+You are allowed to modify the software.
+
+However, modified versions must not misrepresent themselves as the original o
+fficial version unless they are released by the original author.
+
+Modified versions should clearly indicate that changes were made.
+
+4. Branding, Name, Logo, and Visual Identity
+
+The project name, logo, icons, screenshots, branding, visual identity, and
+ author name may not be used in a way that misleads users into believing that an 
+unofficial modified version is the official original release.
+
+You may not use the author's name, project identity, or branding to imply endorsement, 
+partnership, or official approval without written permission.
+
+5. Redistribution
+
+You may redistribute this software or modified versions only if this license file and the 
+original attribution are included.
+
+You may not remove, hide, or alter the original copyright notice or attribution notice.
+
+6. No Warranty
+
+This software is provided "as is", without warranty of any kind, express or implied.
+
+The author is not responsible for any damage, data loss, security issue, compatibility 
+problem, or other issue caused by the use, modification, distribution, or misuse of this software.
+
+Use of this software is at your own risk.
+
+7. Acceptance
+
+By using, copying, forking, modifying, or distributing this software, you agree to the terms of this license.
+
+© 2026 Sonat Birdane. All rights reserved except for the permissions explicitly granted above.
