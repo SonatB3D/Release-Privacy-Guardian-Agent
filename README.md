@@ -562,3 +562,13 @@ The final responsibility for public release decisions belongs to the user.
 This tool is not a replacement for manual review, professional security auditing, legal review, privacy compliance review, customer-data compliance review, or final human approval.
 
 Use it as an additional safety layer before public release.
+
+## License
+
+This project is free to use, fork, modify, and redistribute under the terms of the included `LICENSE` file.
+
+Original author attribution must be preserved.
+
+Original Author: **Sonat Birdane**
+
+You may not claim the original project, source code, documentation, branding, or project identity as your own. Modified versions must clearly state that they are based on the original work created by Sonat Birdane.
